@@ -1,0 +1,122 @@
+﻿<!-- Top Page Title Bar -->
+<div class="page-title-bar">
+    <div class="page-title text-right">
+        <h2>Factorial.</h2>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<container>
+    <div class="row">
+        <div class="col-md-12">
+            <h2 style="padding-left:10px">Instructions</h2>
+            <p style="padding-left:25px">Please enter a number: </p>
+        </div>
+    </div>
+</container>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Input</h3>
+            <section style="text-align:center">
+                <form name=frm>
+                    a) :<input type="number" name="num1" size=1>
+                    <br><br>
+                </form>
+            </section>
+        </div>
+            <div class="col-sm-4">
+                <h3>Calculate</h3>
+                <section style="text-align:center">
+                    <input type="button" class="btn btn-primary" value="Calculate" onclick="factorial()">
+                    <br><br>
+                </section>
+            </div>
+                <div class="col-sm-4">
+                    <h3>Code</h3>
+                    <section style="text-align:center">
+                        <h5>Factorial Value</h5>
+                        <a href="" data-toggle="modal" data-target="#max"> Show Code</a>
+
+                        <div class="modal fade" id="max" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Close</button>
+                                        <h1 class="modal-title" id="myModalLabel" style="font-size:50px;">Factorial Code</h1>
+                                    </div>
+                                    <div class="modal-body col-sm-12">
+                                        <pre class="brush: js; gutter: false; toolbar: false;">
+    function factorial() {
+        var one = document.frm.num1.value;
+        var factorial = 1;
+        while (one > 1) {
+            factorial = factorial * one;
+            one--;
+        }
+        alert(factorial);
+    }
+                    </pre>
+                                    </div>
+                                    <div class="modal-footer no-margin">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                      
+                    </section>
+                </div>
+         </div>
+    </div>
+            <br />
+            <br />
+ <section id="portfolio-nav">
+                <div class="container-fluid">
+                    <!-- Start Container -->
+                    <div class="row">
+                        <!-- Start Row -->
+                        <!-- Previous Button -->
+                        <div class="col-xs-6 col-sm-6 col-md-6 nopadding">
+                            <a href=@Url.Action("java1","java")>
+                                <div class="prev-btn control-nav color-highlight">
+                                    <i class="fa fa-angle-double-left fa-2x"></i>
+                                    <h5>Previous JavaScript</h5>
+                                </div>
+                            </a>
+                        </div><!-- End Previous Button -->
+                        <!-- Next Button -->
+                        <div class="col-xs-6 col-sm-6 col-md-6 nopadding">
+                            <a href=@Url.Action("java3","java")>
+                                <div class="next-btn control-nav text-right">
+                                    <i class="fa fa-angle-double-right fa-2x"></i>
+                                    <h5>Next JavaScript</h5>
+                                </div>
+                            </a>
+                        </div><!-- End Next Button -->
+                    </div> <!-- End Row -->
+                </div> <!-- End Container -->
+                <div class="clearfix"></div>
+            </section>
+
+            @section scripts {
+                <script>
+                    function factorial() {
+                        var one = document.frm.num1.value;
+                        var factorial = 1;
+
+                        while (one > 1) {
+
+                            factorial = factorial * one;
+                            one--;
+
+                        }
+
+                        alert(factorial);
+
+                    }
+                </script>
+            }

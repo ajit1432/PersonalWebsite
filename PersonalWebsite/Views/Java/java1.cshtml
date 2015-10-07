@@ -1,0 +1,281 @@
+﻿<!-- Top Page Title Bar -->
+<div class="page-title-bar">
+    <div class="page-title text-right">
+        <h2>Min, Max, Mean, Sum, Product.</h2>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<container>
+    <div class="row">
+        <div class="col-md-12">
+            <h2 style="padding-left:10px">Instructions</h2>
+            <p style="padding-left:25px">Please enter up to five numbers: </p>
+        </div>
+    </div>
+</container>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Input</h3>
+            <section style="text-align:center">
+                <form name=frm id="input">
+                    a) :<input type="number" name="num1" size=1>
+                    <br><br>
+                    b) :<input type="number" name="num2" size=1>
+                    <br><br>
+                    c) :<input type="number" name="num3" size=1>
+                    <br><br>
+                    d) :<input type="number" name="num4" size=1>
+                    <br><br>
+                    e) :<input type="number" name="num5" size=1>
+                    <br><br>
+                </form>
+            </section>
+        </div>
+        <div class="col-sm-4">
+            <h3>Calculate</h3>
+            <section style="text-align:center">
+                <input type="button" class="btn btn-primary" value="Calculate" onclick="minnum()">
+                <br><div id="temp1"></div><br>
+                <input type="button" class="btn btn-primary" value="Calculate" onclick="maxnum()">
+                <br><div id="temp2"></div><br>
+                <input type="button" class="btn btn-primary" value="Calculate" onclick="mean()">
+                <br><div id="temp3"></div><br>
+                <input type="button" class="btn btn-primary" value="Calculate" onclick="sum()">
+                <br><div id="temp4"></div><br>
+                <input type="button" class="btn btn-primary" value="Calculate" onclick="product()">
+                <br><div id="temp5"></div><br>
+            </section>
+        </div>
+        <div class="col-sm-4">
+            <h3>Code</h3>
+            <section style="text-align:center">
+                <h5>Minimum Value</h5>
+                <a href="" data-toggle="modal" data-target="#min"> Show Code</a><br />
+                <h5>Maximum Value</h5>
+                <a href="" data-toggle="modal" data-target="#max"> Show Code</a><br />
+                <h5>Mean Value</h5>
+                <a href="" data-toggle="modal" data-target="#average"> Show Code</a><br />
+                <h5>Sum Value</h5>
+                <a href="" data-toggle="modal" data-target="#sum"> Show Code</a><br />
+                <h5>Product Value</h5>
+                <a href="" data-toggle="modal" data-target="#product"> Show Code</a><br />
+            </section>
+            <div class="modal fade" id="min" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Close</button>
+                            <h1 class="modal-title" id="myModalLabel" style="font-size:50px;">Math Code</h1>
+                        </div>
+                        <div class="modal-body col-sm-12">
+                            <pre class="brush: js; gutter: false; toolbar: false;">
+    function minnum() {
+        var one = document.frm.num1.value;
+        var two = document.frm.num2.value;
+        var three = document.frm.num3.value;
+        var four = document.frm.num4.value;
+        var five = document.frm.num5.value;
+        alert('Minimum value = ' + Math.min(one, two, three, four, five));
+    }
+    
+                    </pre>
+                        </div>
+                        <div class="modal-footer no-margin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="max" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Close</button>
+                            <h1 class="modal-title" id="myModalLabel" style="font-size:50px;">Math Code</h1>
+                        </div>
+                        <div class="modal-body col-sm-12">
+                            <pre class="brush: js; gutter: false; toolbar: false;">
+    function maxnum() {
+        var one = document.frm.num1.value;
+        var two = document.frm.num2.value;
+        var three = document.frm.num3.value;
+        var four = document.frm.num4.value;
+        var five = document.frm.num5.value;
+        alert('Maximum value='+ Math.max(one, two, three, four, five));
+    }                           
+                    </pre>
+                        </div>
+                        <div class="modal-footer no-margin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="average" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Close</button>
+                            <h1 class="modal-title" id="myModalLabel" style="font-size:50px;">Math Code</h1>
+                        </div>
+                        <div class="modal-body col-sm-12">
+                            <pre class="brush: js; gutter: false; toolbar: false;">
+    function mean() {
+        var one = document.frm.num1.value;
+        var two = document.frm.num2.value;
+        var three = document.frm.num3.value;
+        var four = document.frm.num4.value;
+        var five = document.frm.num5.value;
+        alert('Mean value = ' + (+one + +two + +three + +four + +five) / 5);
+    }
+                    </pre>
+                        </div>
+                        <div class="modal-footer no-margin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="sum" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Close</button>
+                            <h1 class="modal-title" id="myModalLabel" style="font-size:50px;">Math Code</h1>
+                        </div>
+                        <div class="modal-body col-sm-12">
+                            <pre class="brush: js; gutter: false; toolbar: false;">
+    function sum() {
+        var one = document.frm.num1.value;
+        var two = document.frm.num2.value;
+        var three = document.frm.num3.value;
+        var four = document.frm.num4.value;
+        var five = document.frm.num5.value;
+        alert('Sum value = ' + (+one + +two + +three + +four + +five));
+    }  
+                    </pre>
+                        </div>
+                        <div class="modal-footer no-margin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="product" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Close</button>
+                            <h1 class="modal-title" id="myModalLabel" style="font-size:50px;">Math Code</h1>
+                        </div>
+                        <div class="modal-body col-sm-12">
+                            <pre class="brush: js; gutter: false; toolbar: false;">
+    function product() {
+        var one = document.frm.num1.value;
+        var two = document.frm.num2.value;
+        var three = document.frm.num3.value;
+        var four = document.frm.num4.value;
+        var five = document.frm.num5.value;
+        alert('Product value = ' + (+one * +two * +three * +four * +five));
+    }                     
+                    </pre>
+                        </div>
+                        <div class="modal-footer no-margin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<section id="portfolio-nav">
+    <div class="container-fluid">
+        <!-- Start Container -->
+        <div class="row">
+            <!-- Start Row -->
+            <!-- Previous Button -->
+            <div class="col-xs-6 col-sm-6 col-md-6 nopadding">
+                <a href=@Url.Action("java4","java")>
+                    <div class="prev-btn control-nav color-highlight">
+                        <i class="fa fa-angle-double-left fa-2x"></i>
+                        <h5>Previous JavaScript</h5>
+                    </div>
+                </a>
+            </div><!-- End Previous Button -->
+            <!-- Next Button -->
+            <div class="col-xs-6 col-sm-6 col-md-6 nopadding">
+                <a href=@Url.Action("java2","java")>
+                    <div class="next-btn control-nav text-right">
+                        <i class="fa fa-angle-double-right fa-2x"></i>
+                        <h5>Next JavaScript</h5>
+                    </div>
+                </a>
+            </div><!-- End Next Button -->
+        </div> <!-- End Row -->
+    </div> <!-- End Container -->
+    <div class="clearfix"></div>
+</section>
+
+
+@section Scripts{
+    <script>
+        function minnum() {
+            var one = document.frm.num1.value;
+            var two = document.frm.num2.value;
+            var three = document.frm.num3.value;
+            var four = document.frm.num4.value;
+            var five = document.frm.num5.value;
+            var min = 'Minimum value=' + Math.min(one, two, three, four, five);
+            temp1.innerHTML = min;
+        }
+
+        function maxnum() {
+            var one = document.frm.num1.value;
+            var two = document.frm.num2.value;
+            var three = document.frm.num3.value;
+            var four = document.frm.num4.value;
+            var five = document.frm.num5.value;
+            var max = 'Maximum value = ' + Math.max(one, two, three, four, five);
+            temp2.innerHTML = max;
+        }
+
+        function mean() {
+            var one = document.frm.num1.value;
+            var two = document.frm.num2.value;
+            var three = document.frm.num3.value;
+            var four = document.frm.num4.value;
+            var five = document.frm.num5.value;
+            var avg = 'Mean value = ' + (+one + +two + +three + +four + +five) / 5;
+            temp3.innerHTML = avg;
+        }
+
+        function sum() {
+            var one = document.frm.num1.value;
+            var two = document.frm.num2.value;
+            var three = document.frm.num3.value;
+            var four = document.frm.num4.value;
+            var five = document.frm.num5.value;
+            var summ = 'Sum value = ' + (+one + +two + +three + +four + +five);
+            temp4.innerHTML = summ;
+        }
+
+        function product() {
+            var one = document.frm.num1.value;
+            var two = document.frm.num2.value;
+            var three = document.frm.num3.value;
+            var four = document.frm.num4.value;
+            var five = document.frm.num5.value;
+            var pro = 'Product value = ' + (+one * +two * +three * +four * +five);
+            temp5.innerHTML = pro;
+        }
+
+    </script>
+    )
+}
