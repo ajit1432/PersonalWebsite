@@ -75,7 +75,7 @@ namespace PersonalWebsite.Migrations
             userManager = new UserManager<ApplicationUser>(
                 new UserStore<ApplicationUser>(context));
 
-            if (!context.Users.Any(u => u.Email == "araynor@coderfoundry.com"))
+            if (!context.Users.Any(u => u.Email == "bdavis@coderfoundry.com"))
             {
                 userManager.Create(new ApplicationUser
                 {

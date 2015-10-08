@@ -1,0 +1,103 @@
+﻿@model PersonalWebsite.Models.BlogPost
+
+@{
+    ViewBag.Title = "Details";
+}
+<!-- Top Page Title Bar -->
+<div class="page-title-bar">
+    <div class="page-title text-right">
+        <h2>Details</h2>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Created)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Created)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Updated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Updated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Slug)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Slug)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Body)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Body)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MediaURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MediaURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Published)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Published)
+        </dd>
+
+    </dl>
+</div>
+<section id="portfolio-nav">
+    <div class="container-fluid">
+        <!-- Start Container -->
+        <div class="row">
+            <!-- Start Row -->
+            <!-- Previous Button -->
+            <div class="col-xs-6 col-sm-6 col-md-6 nopadding">
+                <a href=@Url.Action("Edit", "BlogPosts")>
+                    <div class="prev-btn control-nav color-highlight">
+                        <i class="fa fa-angle-double-left fa-2x"></i>
+                        <h5>Edit</h5>
+                    </div>
+                </a>
+            </div><!-- End Previous Button -->
+            <!-- Next Button -->
+            <div class="col-xs-6 col-sm-6 col-md-6 nopadding">
+                <a href=@Url.Action("AdminIndex","BlogPosts")>
+                    <div class="next-btn control-nav text-right">
+                        <i class="fa fa-angle-double-right fa-2x"></i>
+                        <h5>Admin</h5>
+                    </div>
+                </a>
+            </div><!-- End Next Button -->
+        </div> <!-- End Row -->
+    </div> <!-- End Container -->
+    <div class="clearfix"></div>
+</section>

@@ -51,6 +51,7 @@
         <!-- Menu Toggle for Off Canvas-Menu -->
         <div id="menu" class="menu" data-toggle="offcanvas" data-target=".navmenu">
             <img src="~/img/menu.png" alt="menu-logo">
+        @Html.Partial("_LoginPartial")
         </div>
     </section>
         @RenderBody()
@@ -73,6 +74,7 @@
                 <li><a class="page-scroll" href="~/#about">About Me</a></li>
                 <li><a class="page-scroll" href="~/#blog">Blog</a></li>
                 <li><a class="page-scroll" href="~/#contact">Contact Me</a></li>
+                <li>@Html.ActionLink("Admin", "AdminIndex", "BlogPosts")</li>
             </ul><!--- End Menu -->
         </div> <!--- End Off Canvas Side Menu -->
         <div class="">
@@ -98,7 +100,7 @@
         <script type="text/javascript" src="~/js/nivo-lightbox.js"></script>
         <!-- Contact page-->
         <script type="text/javascript" src="~/js/jqBootstrapValidation.js"></script>
-        <script type="text/javascript" src="~/js/contact.js"></script>
+        @*<script type="text/javascript" src="~/js/contact.js"></script>*@
         <!-- Custom Javascripts
         ================================================== -->
         <script type="text/javascript" src="~/js/main.js"></script>

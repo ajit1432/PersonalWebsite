@@ -1,0 +1,107 @@
+﻿@model IEnumerable<PersonalWebsite.Models.BlogPost>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- Top Page Title Bar -->
+<div class="page-title-bar">
+    <div class="page-title text-right">
+        <h2>Admin Veiw</h2>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<p>
+    <button class="btn btn-primary">@Html.ActionLink("Create New", "Create")</button>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Updated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Slug)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Body)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MediaURL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Published)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Updated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Slug)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Body)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MediaURL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Published)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+
+<section id="portfolio-nav">
+    <div class="container-fluid">
+        <!-- Start Container -->
+        <div class="row">
+            <!-- Start Row -->
+            <!-- Previous Button -->
+            <div class="col-xs-6 col-sm-6 col-md-6 nopadding">
+                <a href=@Url.Action("BlogIndex","BlogPosts")>
+                    <div class="prev-btn control-nav color-highlight">
+                        <i class="fa fa-angle-double-left fa-2x"></i>
+                        <h5>User View</h5>
+                    </div>
+                </a>
+            </div><!-- End Previous Button -->
+            <!-- Next Button -->
+            <div class="col-xs-6 col-sm-6 col-md-6 nopadding">
+                <a href=@Url.Action("","")>
+                    <div class="next-btn control-nav text-right">
+                        <i class="fa fa-angle-double-right fa-2x"></i>
+                        <h5></h5>
+                    </div>
+                </a>
+            </div><!-- End Next Button -->
+        </div> <!-- End Row -->
+    </div> <!-- End Container -->
+    <div class="clearfix"></div>
+</section>

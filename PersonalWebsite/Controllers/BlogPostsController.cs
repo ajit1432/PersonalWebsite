@@ -13,14 +13,80 @@ namespace PersonalWebsite.Controllers
     public class BlogPostsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        // GET: Blog
+        public ActionResult BlogIndex()
+        {
+            return View(db.Posts.ToList());
+        }
+        // GET: Blog
+        public ActionResult week1()
+        {
+            return View();
+        }
+        // GET: Blog
+        public ActionResult week2()
+        {
+            return View();
+        }
+        // GET: Blog
+        public ActionResult week3()
+        {
+            return View();
+        }
+        // GET: Blog
+        public ActionResult week4()
+        {
+            return View();
+        }
+        // GET: Blog
+        public ActionResult week5()
+        {
+            return View();
+        }
+        // GET: Blog
+        public ActionResult week6()
+        {
+            return View();
+        }
+        // GET: Blog
+        public ActionResult week7()
+        {
+            return View();
+        }
+        // GET: Blog
+        public ActionResult week8()
+        {
+            return View();
+        }
+        // GET: Blog
+        public ActionResult week9()
+        {
+            return View();
+        }
+        // GET: Blog
+        public ActionResult week10()
+        {
+            return View();
+        }
+        // GET: Blog
+        public ActionResult week11()
+        {
+            return View();
+        }
+        // GET: Blog
+        public ActionResult week12()
+        {
+            return View();
+        }
         // GET: BlogPosts
-        public ActionResult Index()
+        [Authorize(Roles = "Admin, Moderator")]
+        public ActionResult AdminIndex()
         {
             return View(db.Posts.ToList());
         }
 
         // GET: BlogPosts/Details/5
+        [Authorize(Roles = "Admin, Moderator")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -53,7 +119,7 @@ namespace PersonalWebsite.Controllers
             {
                 db.Posts.Add(blogPost);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("AdminIndex");
             }
 
             return View(blogPost);
@@ -86,7 +152,7 @@ namespace PersonalWebsite.Controllers
             {
                 db.Entry(blogPost).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("AdminIndex");
             }
             return View(blogPost);
         }
@@ -114,7 +180,7 @@ namespace PersonalWebsite.Controllers
             BlogPost blogPost = db.Posts.Find(id);
             db.Posts.Remove(blogPost);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("AdminIndex");
         }
 
         protected override void Dispose(bool disposing)
